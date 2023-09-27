@@ -1,6 +1,6 @@
 package company.employees;
 
-public class EmployeeByHour extends Employee{
+public class EmployeeByHour extends Employee implements Comparable<EmployeeByHour>{
     private float hour;
     private int salaryInHour;
 
@@ -8,6 +8,7 @@ public class EmployeeByHour extends Employee{
         super(name);
         this.hour = hour;
         this.salaryInHour = salaryInHour;
+        this.nalog = 0.15f;
     }
 
     public EmployeeByHour(){
@@ -33,5 +34,11 @@ public class EmployeeByHour extends Employee{
     @Override
     public Float takeSalary() {
         return hour*salaryInHour;
+    }
+
+    @Override
+    public int compareTo(Employee o) {
+        EmployeeByHour employee = (EmployeeByHour) o;
+        return this.hour > employee.hour?1:-1;
     }
 }

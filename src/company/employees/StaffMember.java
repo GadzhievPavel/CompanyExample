@@ -6,6 +6,7 @@ public class StaffMember extends Employee{
     public StaffMember(String name, int salary) {
         super(name);
         this.salary = salary;
+        this.nalog = 0.2f;
     }
 
     public StaffMember(){
