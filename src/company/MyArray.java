@@ -28,6 +28,9 @@ public class MyArray<T> {
         return max;
     }
 
+    public void sort(){
+        Arrays.sort();
+    }
     @Override
     public String toString() {
         return "MyArray{" +
